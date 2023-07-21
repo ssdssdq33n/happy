@@ -38,8 +38,7 @@ function time(){
     let hour=date.getHours()
     let minute=date.getMinutes()
     let second=date.getSeconds()
-
-    hour=dinhdang(hour)
+    let ngay=date.getDay()
     minute=dinhdang(minute)
     second=dinhdang(second)
 
@@ -49,7 +48,6 @@ function time(){
     s=dinhdang(s)
     let h=23-hour
     let h1=Number.parseInt(h)
-    console.log(h1)
     if(h1===0){
         h=dinhdang(h)
         document.querySelector('.thoigian').innerHTML=`${h}:${m}:${s}`
